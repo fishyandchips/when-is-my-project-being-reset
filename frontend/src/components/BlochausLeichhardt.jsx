@@ -1,7 +1,22 @@
 import { useEffect, useState } from 'react';
 
+import SectorModal from './SectorModal';
+
 function BlochausLeichhardt() {
-  const [sectorColours, setSectorColours] = useState(Array(6).fill(''))
+  const [open, setOpen] = useState(false);
+  const [sectorColours, setSectorColours] = useState(Array(6).fill(''));
+  const [sectorName, setSectorName] = useState('');
+  const [sectorImages, setSectorImages] = useState([]);
+  const [sectorResetDate, setSectorResetDate] = useState('');
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLandscape(window.innerWidth > window.innerHeight);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const date = new Date();
@@ -20,8 +35,24 @@ function BlochausLeichhardt() {
     setSectorColours(currentColours);
   }, []);
 
+  const handleSectorClick = () => {
+    if (!isLandscape) {
+      handleOpen(); 
+    }
+  }
+
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
+      <SectorModal 
+        open={open}
+        handleClose={handleClose}
+        name={sectorName}
+        images={sectorImages}
+        resetDate={sectorResetDate}
+      />
       <svg
         style={{ pointerEvents: 'none' }}
         className="absolute w-[29%] bottom-[19%] left-[11%]"
@@ -49,6 +80,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
@@ -80,6 +112,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
@@ -111,6 +144,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
@@ -142,6 +176,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
@@ -173,6 +208,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
@@ -204,6 +240,7 @@ function BlochausLeichhardt() {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
+            onClick={handleSectorClick}
           />
         </g>
       </svg>
