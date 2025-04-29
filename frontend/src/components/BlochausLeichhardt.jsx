@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import SectorModal from './SectorModal';
 import SectorInfoCard from './SectorInfoCard';
 
-const BlochausLeichhardt = ({ setSectorClicked }) => {
+const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
   const [open, setOpen] = useState(false);
   const [sectorColours, setSectorColours] = useState(Array(6).fill(''));
   const [sectorName, setSectorName] = useState('');
@@ -36,6 +36,13 @@ const BlochausLeichhardt = ({ setSectorClicked }) => {
 
     setSectorColours(currentColours);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      setInfoOpen(false);
+      setSectorClicked(false);
+    }
+  }, [menuOpen]);
 
   const handleSectorClick = () => {
     if (!isLandscape) {
