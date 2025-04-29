@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
 
 import SectorModal from './SectorModal';
+import SectorInfoCard from './SectorInfoCard';
 
-function BlochausLeichhardt() {
+const BlochausLeichhardt = ({ setSectorClicked }) => {
   const [open, setOpen] = useState(false);
   const [sectorColours, setSectorColours] = useState(Array(6).fill(''));
   const [sectorName, setSectorName] = useState('');
   const [sectorImages, setSectorImages] = useState([]);
   const [sectorResetDate, setSectorResetDate] = useState('');
+  const [infoOpen, setInfoOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
   
   useEffect(() => {
@@ -38,6 +40,9 @@ function BlochausLeichhardt() {
   const handleSectorClick = () => {
     if (!isLandscape) {
       handleOpen(); 
+    } else {
+      setInfoOpen(true);
+      setSectorClicked(true);
     }
   }
 
@@ -53,6 +58,7 @@ function BlochausLeichhardt() {
         images={sectorImages}
         resetDate={sectorResetDate}
       />
+
       <svg
         style={{ pointerEvents: 'none' }}
         className="absolute w-[29%] bottom-[19%] left-[11%]"
@@ -244,6 +250,16 @@ function BlochausLeichhardt() {
           />
         </g>
       </svg>
+
+
+
+      <SectorInfoCard
+        open={infoOpen}
+        onClose={() => {setInfoOpen(false); setSectorClicked(false);}}
+        name={sectorName}
+        images={sectorImages}
+        resetDate={sectorResetDate}
+      />
     </>
   )
 }

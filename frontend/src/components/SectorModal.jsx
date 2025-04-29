@@ -5,7 +5,7 @@ import ImageNotSupportedIcon from '@mui/icons-material/ImageNotSupported';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-function SectorModal({ open, handleClose, name, images, resetDate }) {
+const SectorModal = ({ open, handleClose, name, images, resetDate }) => {
   const style = {
     position: 'absolute',
     top: '50%',

@@ -4,8 +4,9 @@ import BlochausLeichhardt from './components/BlochausLeichhardt';
 
 import './App.css';
 
-function App() {
+const App = () => {
   const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
+  const [sectorClicked, setSectorClicked] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +30,7 @@ function App() {
 
           <div className="bg-[#282828] w-screen h-screen relative flex justify-center items-center">
             <div className="relative max-h-[100vh] max-w-[100vh] h-[100vw] w-[100%]">
-              <BlochausLeichhardt />
+              <BlochausLeichhardt setSectorClicked={setSectorClicked}/>
             </div>
           </div>
         </>
@@ -39,9 +40,9 @@ function App() {
             <MenuIcon sx={{ fontSize: "4rem" }}/>
           </nav>
 
-          <div className="bg-[#282828] w-screen h-screen relative flex justify-center items-center">
-            <div className="relative max-h-[100vh] max-w-[100vh] h-[100vw] w-[100%]">
-              <BlochausLeichhardt />
+          <div className={`bg-[#282828] ${sectorClicked ? "w-[60vw]" : "w-screen"} h-screen relative flex justify-center items-center transition-all duration-300 ease-in-out`}>
+            <div className={`relative max-h-[100vh] max-w-[100vh] ${sectorClicked ? "h-[60vw]" : "h-[100vw]"} w-[100%] transition-all duration-300 ease-in-out`}>
+              <BlochausLeichhardt setSectorClicked={setSectorClicked}/>
             </div>
 
             <div className="flex flex-col absolute bottom-12 left-12 text-white text-[2rem]">
