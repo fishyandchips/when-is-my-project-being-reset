@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import MenuIcon from '@mui/icons-material/Menu';
+import BlochausLeichhardt from './components/BlochausLeichhardt';
+
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <nav className="bg-[#616161] w-screen fixed flex items-center justify-between p-5 z-20 text-[2rem] text-white">
+        <MenuIcon sx={{ fontSize: "4rem" }}/>
+        <div className="flex flex-col">
+          <span className="text-right">when is my</span>
+          <span className="text-right">project being reset?</span>
+        </div>
+      </nav>
+
+      <div className="bg-[#282828] w-screen h-screen relative flex justify-center items-center">
+        <div className="relative h-[100vw] w-[100%]">
+          <BlochausLeichhardt />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
