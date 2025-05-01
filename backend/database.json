@@ -5,36 +5,55 @@
         {
           "name": "Sector 1",
           "images": [],
+          "imageFileNames": [
+            "IMG_1115.jpg",
+            "IMG_1120.jpg"
+          ],
           "lastReset": "2025-05-01T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 2",
           "images": [],
+          "imageFileNames": [
+            "IMG_1119.jpg"
+          ],
           "lastReset": "2025-04-03T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 3",
           "images": [],
+          "imageFileNames": [
+            "IMG_1117.jpg"
+          ],
           "lastReset": "2025-04-17T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 4",
           "images": [],
+          "imageFileNames": [
+            "IMG_1116.jpg"
+          ],
           "lastReset": "2025-04-24T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 5",
           "images": [],
+          "imageFileNames": [
+            "IMG_1118.jpg"
+          ],
           "lastReset": "2025-04-10T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 6",
           "images": [],
+          "imageFileNames": [
+            "IMG_1120.jpg"
+          ],
           "lastReset": "2025-03-27T14:00:00.000Z",
           "hasEvent": false
         }

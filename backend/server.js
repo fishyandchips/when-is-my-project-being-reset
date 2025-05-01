@@ -28,8 +28,6 @@ const fs = require('fs');
 const path = require('path');
 const dbPath = './database.json';
 
-app.use('/assets', express.static(path.join(__dirname, '../frontend/public/assets')));
-
 function loadDatabase() {
   const data = fs.readFileSync(dbPath, 'utf-8');
   return JSON.parse(data);
@@ -43,11 +41,9 @@ function save(db) {
   }
 }
 
-function getImagesFromDirectory(directoryPath, gymName, sectorIndex) {
+function getImageUrls(gymName, sectorIndex, filenames) {
   const frontendUrl = 'https://when-is-my-project-being-reset.vercel.app';
-
-  return fs.readdirSync(directoryPath)
-    .map(file => `${frontendUrl}/assets/${gymName}/sector${sectorIndex + 1}/${file}`);
+  return filenames.map(file => `${frontendUrl}/assets/${gymName}/sector${sectorIndex + 1}/${file}`);
 }
 
 app.get('/sectors/:gymName', catchErrors((req, res) => {
@@ -62,8 +58,7 @@ app.get('/sectors/:gymName', catchErrors((req, res) => {
   const now = new Date();
 
   gym.sectors.forEach((sector, index) => {
-    const sectorPath = path.join(__dirname, `../frontend/public/assets/${gymName}/sector${index + 1}`);
-    sector.images = getImagesFromDirectory(sectorPath, gymName, index);
+    sector.images = getImageUrls(gymName, index, sector.imageFilenames || []);
 
     const lastReset = new Date(sector.lastReset);
     const daysSinceReset = (now - lastReset) / (1000 * 60 * 60 * 24);
