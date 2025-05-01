@@ -4,30 +4,19 @@
       "sectors": [
         {
           "name": "Sector 1",
-          "images": [
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1115.jpg",
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1116.jpg",
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1117.jpg",
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1118.jpg",
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1119.jpg",
-            "/src/assets/BlocHausLeichhardt/sector1/IMG_1120.jpg"
-          ],
+          "images": [],
           "lastReset": "2025-05-01T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 2",
-          "images": [
-            "/src/assets/BlocHausLeichhardt/sector2/IMG_1115.jpg"
-          ],
+          "images": [],
           "lastReset": "2025-04-03T14:00:00.000Z",
           "hasEvent": false
         },
         {
           "name": "Sector 3",
-          "images": [
-            "/src/assets/BlocHausLeichhardt/sector3/IMG_1115.jpg"
-          ],
+          "images": [],
           "lastReset": "2025-04-17T14:00:00.000Z",
           "hasEvent": false
         },
