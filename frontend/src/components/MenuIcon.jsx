@@ -1,0 +1,25 @@
+const MenuIcon = ({ toggleMenu, menuOpen }) => {
+  return (
+    <>
+      <div className="relative w-[3vw] h-[3vw] z-50 cursor-pointer" onClick={toggleMenu}>
+        <span
+          className={`block absolute h-[0.3vw] w-full bg-white transform transition duration-300 ease-in-out ${
+            menuOpen ? 'rotate-45 top-[1.2vw]' : 'top-[0.4vw]'
+          }`}
+        />
+        <span
+          className={`block absolute h-[0.3vw] w-full bg-white transition-opacity duration-300 ease-in-out ${
+            menuOpen ? 'opacity-0 top-[1.2vw]' : 'top-[1.2vw]'
+          }`}
+        />
+        <span
+          className={`block absolute h-[0.3vw] w-full bg-white transform transition duration-300 ease-in-out ${
+            menuOpen ? '-rotate-45 top-[1.2vw]' : 'bottom-[0.6vw]'
+          }`}
+        />
+      </div>
+    </>
+  );
+};
+
+export default MenuIcon

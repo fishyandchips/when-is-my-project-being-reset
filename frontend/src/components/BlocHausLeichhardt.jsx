@@ -1,41 +1,57 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import SectorModal from './SectorModal';
 import SectorInfoCard from './SectorInfoCard';
 
-const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
+const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
   const [open, setOpen] = useState(false);
+  const [sectors, setSectors] = useState([]);
   const [sectorColours, setSectorColours] = useState(Array(6).fill(''));
+  const [sectorColour, setSectorColour] = useState('');
   const [sectorName, setSectorName] = useState('');
   const [sectorImages, setSectorImages] = useState([]);
   const [sectorResetDate, setSectorResetDate] = useState('');
   const [infoOpen, setInfoOpen] = useState(false);
-  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth / window.innerHeight > 1);
   
   useEffect(() => {
     const handleResize = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight);
+      setIsLandscape(window.innerWidth / window.innerHeight > 1);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
+    getSectors('BlocHausLeichhardt');
+  }, []);
+
+  useEffect(() => {
+    if (sectors.length === 0) {
+      return;
+    }
+
     const date = new Date();
     const currentColours = [...sectorColours];
 
     currentColours.forEach((_, index) => {
-      if (date.getDate() % index === 0) {
+      const resetDate = new Date(sectors[index].lastReset);
+      const daysSinceReset = (date - resetDate) / (1000 * 60 * 60 * 24);
+      
+      if (sectors[index].hasEvent) {
+        currentColours[index] = '#777bf7';
+      } else if (daysSinceReset <= 42 && daysSinceReset > 35) {
         currentColours[index] = '#f77f77';
-      } else if (date.getDate() % index === 1) {
-        currentColours[index] = '#fcba03';
+      } else if (daysSinceReset <= 7) {
+        currentColours[index] = '#f7b777';
       } else {
         currentColours[index] = '#ffffff';
       }
     });
 
     setSectorColours(currentColours);
-  }, []);
+  }, [sectors]);
 
   useEffect(() => {
     if (menuOpen) {
@@ -44,7 +60,22 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
     }
   }, [menuOpen]);
 
-  const handleSectorClick = () => {
+  const getSectors = async (gymName) => {
+    try {
+      const response = await axios.get(`http://localhost:5000/sectors/${gymName}`);
+      setSectors(response.data.sectors);
+    } catch (err) {
+      console.error(err.response.data.error);
+    }
+  }
+
+  const handleSectorClick = (index) => {
+    const sector = sectors[index];
+    setSectorColour(sectorColours[index]);
+    setSectorName(sector.name);
+    setSectorImages(sector.images);
+    setSectorResetDate(sector.lastReset);
+
     if (!isLandscape) {
       handleOpen(); 
     } else {
@@ -61,6 +92,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
       <SectorModal 
         open={open}
         handleClose={handleClose}
+        bgColor={sectorColour}
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
@@ -93,7 +125,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(0)}
           />
         </g>
       </svg>
@@ -125,7 +157,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(1)}
           />
         </g>
       </svg>
@@ -157,7 +189,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(2)}
           />
         </g>
       </svg>
@@ -189,7 +221,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(3)}
           />
         </g>
       </svg>
@@ -221,7 +253,7 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(4)}
           />
         </g>
       </svg>
@@ -253,16 +285,15 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
             }}
             onMouseEnter={(e) => e.target.style.fillOpacity = 0.2}
             onMouseLeave={(e) => e.target.style.fillOpacity = 0}
-            onClick={handleSectorClick}
+            onClick={() => handleSectorClick(5)}
           />
         </g>
       </svg>
 
-
-
       <SectorInfoCard
         open={infoOpen}
         onClose={() => {setInfoOpen(false); setSectorClicked(false);}}
+        bgColor={sectorColour}
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
@@ -271,4 +302,4 @@ const BlochausLeichhardt = ({ menuOpen, setSectorClicked }) => {
   )
 }
 
-export default BlochausLeichhardt
+export default BlocHausLeichhardt
