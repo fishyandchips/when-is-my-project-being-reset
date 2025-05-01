@@ -43,9 +43,9 @@ function save(db) {
   }
 }
 
-function getImageUrls(gymName, sectorIndex, filenames) {
+function getImageUrls(gymName, sectorIndex, fileNames) {
   const frontendUrl = 'https://when-is-my-project-being-reset.vercel.app';
-  return filenames.map(file => `${frontendUrl}/assets/${gymName}/sector${sectorIndex + 1}/${file}`);
+  return fileNames.map(file => `${frontendUrl}/assets/${gymName}/sector${sectorIndex + 1}/${file}`);
 }
 
 app.get('/sectors/:gymName', catchErrors((req, res) => {
@@ -60,7 +60,7 @@ app.get('/sectors/:gymName', catchErrors((req, res) => {
   const now = new Date();
 
   gym.sectors.forEach((sector, index) => {
-    sector.images = getImageUrls(gymName, index, sector.imageFilenames || []);
+    sector.images = getImageUrls(gymName, index, sector.imageFileNames || []);
 
     const lastReset = new Date(sector.lastReset);
     const daysSinceReset = (now - lastReset) / (1000 * 60 * 60 * 24);
