@@ -6,7 +6,9 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://when-is-my-project-being-reset.vercel.app',
+}));
 app.use(express.json());
 
 const catchErrors = fn => async (req, res) => {
