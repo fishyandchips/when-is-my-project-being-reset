@@ -65,15 +65,17 @@ app.get('/sectors/:gymName', catchErrors((req, res) => {
     const lastReset = new Date(sector.lastReset);
     const daysSinceReset = (now - lastReset) / (1000 * 60 * 60 * 24);
 
-    if (daysSinceReset >= 42) {
-      lastReset.setUTCDate(lastReset.getUTCDate() + 42);
+    if (daysSinceReset >= sector.currInterval) {
+      lastReset.setUTCDate(lastReset.getUTCDate() + sector.currInterval);
       sector.lastReset = lastReset.toISOString();
+      const currentIndex = gym.intervalWeeks.indexOf(sector.currInterval);
+      sector.currInterval = gym.intervalWeeks[(currentIndex + 1) % gym.intervalWeeks.length];
     }
   });
 
   save(db);
 
-  return res.json({ sectors: gym.sectors });
+  return res.json({ intervalWeeks: gym.intervalWeeks, sectors: gym.sectors });
 }));
 
 app.get("/", (req, res) => {

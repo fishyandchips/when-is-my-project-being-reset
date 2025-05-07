@@ -1,6 +1,9 @@
 {
   "gyms": {
     "BlocHausLeichhardt": {
+      "intervalDays": [
+        42
+      ],
       "sectors": [
         {
           "name": "Sector 1",
@@ -13,7 +16,8 @@
             "IMG_1120.jpg"
           ],
           "lastReset": "2025-05-01T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         },
         {
           "name": "Sector 2",
@@ -24,7 +28,8 @@
             "IMG_1119.jpg"
           ],
           "lastReset": "2025-04-03T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         },
         {
           "name": "Sector 3",
@@ -35,7 +40,8 @@
             "IMG_1117.jpg"
           ],
           "lastReset": "2025-04-17T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         },
         {
           "name": "Sector 4",
@@ -46,7 +52,8 @@
             "IMG_1116.jpg"
           ],
           "lastReset": "2025-04-24T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         },
         {
           "name": "Sector 5",
@@ -57,7 +64,8 @@
             "IMG_1118.jpg"
           ],
           "lastReset": "2025-04-10T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         },
         {
           "name": "Sector 6",
@@ -68,11 +76,16 @@
             "IMG_1120.jpg"
           ],
           "lastReset": "2025-03-27T14:00:00.000Z",
-          "hasEvent": false
+          "hasEvent": false,
+          "currInterval": 42
         }
       ]
     },
     "BlocHausMarrickville": {
+      "intervalDays": [
+        37,
+        40
+      ],
       "sectors": [
         {
           "name": "Sector 1",
@@ -88,15 +101,17 @@
             "IMG_1170.jpg",
             "IMG_1172.jpg"
           ],
-          "lastReset": "2025-04-01T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-05-07T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         },
         {
           "name": "Sector 2",
           "images": [],
           "imageFileNames": [],
-          "lastReset": "2025-04-29T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-28T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 37
         },
         {
           "name": "Sector 3",
@@ -108,22 +123,25 @@
             "IMG_1138.jpg",
             "IMG_1140.jpg"
           ],
-          "lastReset": "2025-04-08T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-07T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 37
         },
         {
           "name": "Sector 4",
           "images": [],
           "imageFileNames": [],
-          "lastReset": "2025-04-17T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-16T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         },
         {
           "name": "Sector 5",
           "images": [],
           "imageFileNames": [],
-          "lastReset": "2025-05-01T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-30T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         },
         {
           "name": "Sector 6",
@@ -139,15 +157,17 @@
             "IMG_1156.jpg",
             "IMG_1158.jpg"
           ],
-          "lastReset": "2025-04-10T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-09T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         },
         {
           "name": "Sector 7",
           "images": [],
           "imageFileNames": [],
-          "lastReset": "2025-05-06T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-05-05T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 37
         },
         {
           "name": "Sector 8",
@@ -161,15 +181,17 @@
             "IMG_1162.jpg",
             "IMG_1164.jpg"
           ],
-          "lastReset": "2025-04-22T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-21T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 37
         },
         {
           "name": "Sector 9",
           "images": [],
           "imageFileNames": [],
-          "lastReset": "2025-04-15T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-14T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 37
         },
         {
           "name": "Sector 10",
@@ -187,8 +209,9 @@
             "IMG_1148.jpg",
             "IMG_1150.jpg"
           ],
-          "lastReset": "2025-04-03T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-02T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         },
         {
           "name": "Sector 11",
@@ -198,8 +221,9 @@
           "imageFileNames": [
             "IMG_1176.jpg"
           ],
-          "lastReset": "2025-04-24T14:00:00.000Z",
-          "hasEvent": false
+          "lastReset": "2025-04-23T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 40
         }
       ]
     }

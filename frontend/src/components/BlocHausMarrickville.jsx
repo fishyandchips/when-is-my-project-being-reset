@@ -12,6 +12,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
   const [sectorName, setSectorName] = useState('');
   const [sectorImages, setSectorImages] = useState([]);
   const [sectorResetDate, setSectorResetDate] = useState('');
+  const [sectorCurrInterval, setSectorCurrInterval] = useState('');
   const [infoOpen, setInfoOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(window.innerWidth / window.innerHeight > 1);
   
@@ -41,7 +42,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
       
       if (sectors[index].hasEvent) {
         currentColours[index] = '#777bf7';
-      } else if (daysSinceReset <= 42 && daysSinceReset > 35) {
+      } else if (daysSinceReset <= sectors[index].currInterval && daysSinceReset > sectors[index].currInterval - 7) {
         currentColours[index] = '#f77f77';
       } else if (daysSinceReset <= 7) {
         currentColours[index] = '#f7b777';
@@ -62,7 +63,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
 
   const getSectors = async (gymName) => {
     try {
-      const response = await axios.get(`https://when-is-my-project-being-reset.onrender.com/sectors/${gymName}`);
+      const response = await axios.get(`http://localhost:5000/sectors/${gymName}`);
       setSectors(response.data.sectors);
     } catch (err) {
       console.error(err.response.data.error);
@@ -75,6 +76,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
     setSectorName(sector.name);
     setSectorImages(sector.images);
     setSectorResetDate(sector.lastReset);
+    setSectorCurrInterval(sector.currInterval);
 
     if (!isLandscape) {
       handleOpen(); 
@@ -96,6 +98,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
+        currInterval={sectorCurrInterval}
       />
 
       <svg
@@ -104,7 +107,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 32.361347 71.531731"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -136,7 +139,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 33.017292 57.131699"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -168,7 +171,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 46.59687 22.750048"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -200,7 +203,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 55.986664 67.285583"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -232,7 +235,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 60.321365 47.26664"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -264,7 +267,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 39.659241 65.209618"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -296,7 +299,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 48.672585 62.99588"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -324,9 +327,9 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
             id="path17"
             style={{
               fill: '#282828',
-              stroke: sectorColours[10],
+              stroke: sectorColours[6],
               strokeWidth: 0.865,
-              opacity: 1,
+              opacity: 1
             }}
           />
         </g>
@@ -338,7 +341,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 51.487278 55.277252"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -370,7 +373,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 27.058065 57.090412"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -402,7 +405,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 26.528154 63.719776"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -434,7 +437,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         viewBox="0 0 42.209286 42.222748"
         version="1.1"
         id="svg1"
-        xml:space="preserve"
+        xmlSpace="preserve"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:svg="http://www.w3.org/2000/svg"
       >
@@ -464,7 +467,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
               fill: '#282828',
               stroke: sectorColours[10],
               strokeWidth: 0.865,
-              opacity: 1,
+              opacity: 1
             }}
           />
         </g>
@@ -477,6 +480,7 @@ const BlocHausMarrickville = ({ menuOpen, setSectorClicked }) => {
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
+        currInterval={sectorCurrInterval}
       />
     </>
   )

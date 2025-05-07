@@ -5,14 +5,14 @@ import ImageNotSupportedIcon from '@mui/icons-material/ImageNotSupported';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate }) => {
+const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, currInterval }) => {
   const formatDate = (resetDate) => {
     const today = new Date();
     const lastReset = new Date(resetDate);
     const diffInDays = Math.round((today - lastReset) / (1000 * 60 * 60 * 24));
   
-    if (diffInDays >= 35 && diffInDays <= 42) {
-      const daysUntilNextReset = 42 - diffInDays;
+    if (diffInDays >= currInterval - 7 && diffInDays <= currInterval) {
+      const daysUntilNextReset = currInterval - diffInDays;
       return (
         <>
           {daysUntilNextReset === 0 ? (
@@ -44,7 +44,7 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate }) =>
     }
   
     const nextReset = new Date(lastReset);
-    nextReset.setDate(nextReset.getDate() + 42);
+    nextReset.setDate(nextReset.getDate() + currInterval);
   
     const day = String(nextReset.getDate()).padStart(2, '0');
     const month = String(nextReset.getMonth() + 1).padStart(2, '0');

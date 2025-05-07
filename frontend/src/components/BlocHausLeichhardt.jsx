@@ -12,6 +12,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
   const [sectorName, setSectorName] = useState('');
   const [sectorImages, setSectorImages] = useState([]);
   const [sectorResetDate, setSectorResetDate] = useState('');
+  const [sectorCurrInterval, setSectorCurrInterval] = useState('');
   const [infoOpen, setInfoOpen] = useState(false);
   const [isLandscape, setIsLandscape] = useState(window.innerWidth / window.innerHeight > 1);
   
@@ -41,7 +42,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
       
       if (sectors[index].hasEvent) {
         currentColours[index] = '#777bf7';
-      } else if (daysSinceReset <= 42 && daysSinceReset > 35) {
+      } else if (daysSinceReset <= sectors[index].currInterval && daysSinceReset > sectors[index].currInterval - 7) {
         currentColours[index] = '#f77f77';
       } else if (daysSinceReset <= 7) {
         currentColours[index] = '#f7b777';
@@ -62,7 +63,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
 
   const getSectors = async (gymName) => {
     try {
-      const response = await axios.get(`https://when-is-my-project-being-reset.onrender.com/sectors/${gymName}`);
+      const response = await axios.get(`http://localhost:5000/sectors/${gymName}`);
       setSectors(response.data.sectors);
     } catch (err) {
       console.error(err.response.data.error);
@@ -75,6 +76,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
     setSectorName(sector.name);
     setSectorImages(sector.images);
     setSectorResetDate(sector.lastReset);
+    setSectorCurrInterval(sector.currInterval);
 
     if (!isLandscape) {
       handleOpen(); 
@@ -96,6 +98,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
+        currInterval={sectorCurrInterval}
       />
 
       <svg
@@ -297,6 +300,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
         name={sectorName}
         images={sectorImages}
         resetDate={sectorResetDate}
+        currInterval={sectorCurrInterval}
       />
     </>
   )
