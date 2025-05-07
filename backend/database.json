@@ -4,7 +4,10 @@
       "sectors": [
         {
           "name": "Sector 1",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector1/IMG_1115.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector1/IMG_1120.jpg"
+          ],
           "imageFileNames": [
             "IMG_1115.jpg",
             "IMG_1120.jpg"
@@ -14,7 +17,9 @@
         },
         {
           "name": "Sector 2",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector2/IMG_1119.jpg"
+          ],
           "imageFileNames": [
             "IMG_1119.jpg"
           ],
@@ -23,7 +28,9 @@
         },
         {
           "name": "Sector 3",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector3/IMG_1117.jpg"
+          ],
           "imageFileNames": [
             "IMG_1117.jpg"
           ],
@@ -32,7 +39,9 @@
         },
         {
           "name": "Sector 4",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector4/IMG_1116.jpg"
+          ],
           "imageFileNames": [
             "IMG_1116.jpg"
           ],
@@ -41,7 +50,9 @@
         },
         {
           "name": "Sector 5",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector5/IMG_1118.jpg"
+          ],
           "imageFileNames": [
             "IMG_1118.jpg"
           ],
@@ -50,11 +61,144 @@
         },
         {
           "name": "Sector 6",
-          "images": [],
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausLeichhardt/sector6/IMG_1120.jpg"
+          ],
           "imageFileNames": [
             "IMG_1120.jpg"
           ],
           "lastReset": "2025-03-27T14:00:00.000Z",
+          "hasEvent": false
+        }
+      ]
+    },
+    "BlocHausMarrickville": {
+      "sectors": [
+        {
+          "name": "Sector 1",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector1/IMG_1166.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector1/IMG_1168.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector1/IMG_1170.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector1/IMG_1172.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1166.jpg",
+            "IMG_1168.jpg",
+            "IMG_1170.jpg",
+            "IMG_1172.jpg"
+          ],
+          "lastReset": "2025-04-01T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 2",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-29T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 3",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector3/IMG_1138.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector3/IMG_1140.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1138.jpg",
+            "IMG_1140.jpg"
+          ],
+          "lastReset": "2025-04-08T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 4",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-17T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 5",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-01T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 6",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector6/IMG_1152.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector6/IMG_1154.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector6/IMG_1156.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector6/IMG_1158.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1152.jpg",
+            "IMG_1154.jpg",
+            "IMG_1156.jpg",
+            "IMG_1158.jpg"
+          ],
+          "lastReset": "2025-04-10T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 7",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-06T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 8",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector8/IMG_1160.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector8/IMG_1162.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector8/IMG_1164.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1160.jpg",
+            "IMG_1162.jpg",
+            "IMG_1164.jpg"
+          ],
+          "lastReset": "2025-04-22T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 9",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-15T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 10",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector10/IMG_1143.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector10/IMG_1144.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector10/IMG_1146.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector10/IMG_1148.jpg",
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector10/IMG_1150.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1143.jpg",
+            "IMG_1144.jpg",
+            "IMG_1146.jpg",
+            "IMG_1148.jpg",
+            "IMG_1150.jpg"
+          ],
+          "lastReset": "2025-04-03T14:00:00.000Z",
+          "hasEvent": false
+        },
+        {
+          "name": "Sector 11",
+          "images": [
+            "https://when-is-my-project-being-reset.vercel.app/assets/BlocHausMarrickville/sector11/IMG_1176.jpg"
+          ],
+          "imageFileNames": [
+            "IMG_1176.jpg"
+          ],
+          "lastReset": "2025-04-24T14:00:00.000Z",
           "hasEvent": false
         }
       ]

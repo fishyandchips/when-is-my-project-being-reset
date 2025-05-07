@@ -1,4 +1,4 @@
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 const NavCard = ({ open, isLandscape }) => {
   return (
@@ -11,8 +11,8 @@ const NavCard = ({ open, isLandscape }) => {
         >
           <div className="mt-[5vw] text-center flex flex-col gap-[2vw]">
             <h1 className="border-b border-white pb-2 text-[3vw]"><strong>gyms</strong></h1>
-            <Link href="#" underline="hover" sx={{ color: 'white' }}>blochaus leichhardt</Link>
-            <Link href="#" underline="hover" sx={{ color: 'white' }}>blochaus marrickville</Link>
+            <Link to="/BlocHausLeichhardt" style={{ color: 'white' }}>blochaus leichhardt</Link>
+            <Link to="/BlocHausMarrickville" style={{ color: 'white' }}>blochaus marrickville</Link>
           </div>
 
           <div className="text-center">
@@ -30,8 +30,8 @@ const NavCard = ({ open, isLandscape }) => {
         >
           <div className="mt-[5vw] text-center flex flex-col gap-[2vw]">
             <h1 className="border-b border-white pb-3 text-[5vw]"><strong>gyms</strong></h1>
-            <Link href="#" underline="hover" sx={{ color: 'white' }}>blochaus leichhardt</Link>
-            <Link href="#" underline="hover" sx={{ color: 'white' }}>blochaus marrickville</Link>
+            <Link to="/BlocHausLeichhardt" style={{ color: 'white' }}>blochaus leichhardt</Link>
+            <Link to="/BlocHausMarrickville" style={{ color: 'white' }}>blochaus marrickville</Link>
           </div>
 
           <div className="text-center">
