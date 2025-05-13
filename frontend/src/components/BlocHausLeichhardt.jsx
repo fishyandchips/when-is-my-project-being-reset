@@ -63,7 +63,7 @@ const BlocHausLeichhardt = ({ menuOpen, setSectorClicked }) => {
 
   const getSectors = async (gymName) => {
     try {
-      const response = await axios.get(`http://localhost:5000/sectors/${gymName}`);
+      const response = await axios.get(`https://when-is-my-project-being-reset.onrender.com/sectors/${gymName}`);
       setSectors(response.data.sectors);
     } catch (err) {
       console.error(err.response.data.error);
