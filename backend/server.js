@@ -68,14 +68,14 @@ app.get('/sectors/:gymName', catchErrors((req, res) => {
     if (daysSinceReset >= sector.currInterval) {
       lastReset.setUTCDate(lastReset.getUTCDate() + sector.currInterval);
       sector.lastReset = lastReset.toISOString();
-      const currentIndex = gym.intervalWeeks.indexOf(sector.currInterval);
-      sector.currInterval = gym.intervalWeeks[(currentIndex + 1) % gym.intervalWeeks.length];
+      const currentIndex = gym.intervalDays.indexOf(sector.currInterval);
+      sector.currInterval = gym.intervalDays[(currentIndex + 1) % gym.intervalDays.length];
     }
   });
 
   save(db);
 
-  return res.json({ intervalWeeks: gym.intervalWeeks, sectors: gym.sectors });
+  return res.json({ sectors: gym.sectors });
 }));
 
 app.get("/", (req, res) => {
