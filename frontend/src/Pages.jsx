@@ -35,7 +35,7 @@ const Pages = () => {
     <>
       {!isLandscape ? (
         <>
-          <nav className="bg-[#616161] w-screen h-[12vw] fixed flex items-center top-0 justify-between pl-7 pr-7 z-20 text-[3vw] text-white">
+          <nav className="bg-[#616161] w-screen h-[12vw] fixed flex items-center top-0 justify-between pl-2 pr-5 z-20 text-[3vw] text-white">
             <NavCard
               open={menuOpen}
               setOpen={setMenuOpen}
@@ -45,6 +45,7 @@ const Pages = () => {
             <MenuIcon
               toggleMenu={toggleMenu}
               menuOpen={menuOpen}
+              isLandscape={isLandscape}
             />
 
             <div className="flex flex-col text-[2.7vw]">
@@ -53,19 +54,19 @@ const Pages = () => {
             </div>
           </nav>
 
-          <div className="bg-[#282828] w-screen top-[10vw] h-[calc(100dvh-12vw)] relative flex justify-center items-center">
+          <div className="bg-[#282828] w-screen top-[12vw] h-[calc(100dvh-12vw)] relative flex justify-center items-center">
             <div className="relative max-h-[90vh] max-w-[90vh] h-[100vw] w-[100%]">
-            <Routes>
-              <Route path="/" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
-              <Route path="/BlocHausLeichhardt" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
-              <Route path="/BlocHausMarrickville" element={<BlocHausMarrickville menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
-            </Routes>
+              <Routes>
+                <Route path="/" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
+                <Route path="/BlocHausLeichhardt" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
+                <Route path="/BlocHausMarrickville" element={<BlocHausMarrickville menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
+              </Routes>
             </div>
           </div>
         </>
       ) : (
         <>
-          <nav className="bg-[transparent] w-screen fixed flex items-center justify-between p-5 z-20 text-[2vw] text-white">
+          <nav className="bg-[transparent] fixed flex items-center justify-between p-5 z-20 text-[2vw] text-white">
             <NavCard
               open={menuOpen}
               setOpen={setMenuOpen}
@@ -75,6 +76,7 @@ const Pages = () => {
             <MenuIcon
               toggleMenu={toggleMenu}
               menuOpen={menuOpen}
+              isLandscape={isLandscape}
             />
           </nav>
 
