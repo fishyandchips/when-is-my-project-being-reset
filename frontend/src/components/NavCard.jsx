@@ -5,7 +5,7 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
     <>
       {isLandscape ? (
         <div
-          className={`fixed top-0 left-0 h-screen w-[40vw] bg-[#616161] text-white p-4 flex flex-col justify-between shadow-lg z-30 overflow-y-auto transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 h-[100dvh] w-[40vw] bg-[#616161] text-white p-4 flex flex-col justify-between shadow-lg z-30 overflow-y-auto transition-transform duration-300 ease-in-out ${
             open ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
@@ -16,7 +16,7 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
           </div>
 
           <div className="text-center">
-            <h2 className="text-[2vw]">
+            <h2 className="text-[1.5vw]">
               something not quite right? email us here:
               <a href="mailto:wimpbr@gmail.com" className="underline ml-1 text-white">wimpbr@gmail.com</a>
             </h2>

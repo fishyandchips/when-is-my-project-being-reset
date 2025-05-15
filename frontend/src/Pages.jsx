@@ -78,7 +78,7 @@ const Pages = () => {
             />
           </nav>
 
-          <div className={`bg-[#282828] ${sectorClicked || menuOpen ? "w-[60vw]" : "w-screen"} ${menuOpen ? "left-[40vw]" : "left-0"} h-screen relative flex justify-center items-center transition-all duration-300 ease-in-out`}>
+          <div className={`bg-[#282828] ${sectorClicked || menuOpen ? "w-[60vw]" : "w-screen"} ${menuOpen ? "left-[40vw]" : "left-0"} h-[100dvh] relative flex justify-center items-center transition-all duration-300 ease-in-out`}>
             <div className={`relative max-h-[90vh] max-w-[90vh] ${sectorClicked || menuOpen ? "h-[60vw]" : "h-[100vw]"} w-[100%] transition-all duration-300 ease-in-out`}>
               <Routes>
                 <Route path="/" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />

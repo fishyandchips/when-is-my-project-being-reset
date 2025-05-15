@@ -57,7 +57,7 @@ const SectorInfoCard = ({ open, onClose, bgColor, name, images, resetDate, currI
   return (
     <div
       style={{ backgroundColor: bgColor === '#ffffff' ? '#616161' : bgColor }}
-      className={`fixed top-0 right-0 h-screen w-[40vw] text-white p-4 flex flex-col gap-2 shadow-lg z-50 overflow-y-auto transition-transform duration-300 ease-in-out ${
+      className={`fixed top-0 right-0 h-[100dvh] w-[40vw] text-white p-4 flex flex-col gap-2 shadow-lg z-50 overflow-y-auto transition-transform duration-300 ease-in-out ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
