@@ -91,13 +91,13 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, curr
           </Box>
 
           {images.length > 1 ? (
-            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div id="carouselModal" className="carousel slide" data-bs-ride="carousel">
               <div className="carousel-indicators">
                 {images.map((_, index) => (
                   <button
                     key={index}
                     type="button"
-                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-target="#carouselModal"
                     data-bs-slide-to={index}
                     className={index === 0 ? "active" : ""}
                     aria-current={index === 0 ? "true" : undefined}
@@ -113,6 +113,15 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, curr
                   </div>
                 ))}
               </div>
+
+              <button className="carousel-control-prev" type="button" data-bs-target="#carouselModal" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#carouselModal" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
             </div>
           ) : images.length === 1 ? (
             <div>
