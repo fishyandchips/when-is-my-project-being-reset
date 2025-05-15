@@ -24,7 +24,7 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
         </div>
       ) : (
         <div
-          className={`fixed top-0 left-0 w-screen h-[100%] bg-[#616161] text-white p-10 flex flex-col justify-between gap-2 shadow-lg z-30 overflow-y-auto transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 w-screen h-[100dvh] bg-[#616161] text-white p-10 flex flex-col justify-between gap-2 shadow-lg z-30 overflow-y-auto transition-transform duration-300 ease-in-out ${
             open ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
