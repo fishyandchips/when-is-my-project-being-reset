@@ -73,6 +73,7 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, curr
     flexDirection: 'column', 
     gap: 1,
     overflowY: 'auto',
+    outline: 'none'
   };
 
   return (

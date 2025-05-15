@@ -35,7 +35,7 @@ const Pages = () => {
     <>
       {!isLandscape ? (
         <>
-          <nav className="bg-[#616161] w-screen h-[10vw] fixed flex items-center top-0 justify-between pl-4 pr-4 z-20 text-[3vw] text-white">
+          <nav className="bg-[#616161] w-screen h-[12vw] fixed flex items-center top-0 justify-between pl-7 pr-7 z-20 text-[3vw] text-white">
             <NavCard
               open={menuOpen}
               setOpen={setMenuOpen}
@@ -87,7 +87,10 @@ const Pages = () => {
               </Routes>
             </div>
 
-            <div className="flex flex-col absolute bottom-12 left-12 text-white text-[2vw] drop-shadow-lg">
+            <div
+              className={`flex flex-col absolute bottom-12 left-12 text-white text-[2vw] drop-shadow-lg transition-all duration-300 ease-in-out
+                ${menuOpen || sectorClicked ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+            >
               <span className="text-left">when is my</span>
               <span className="text-left">project being reset?</span>
             </div>
