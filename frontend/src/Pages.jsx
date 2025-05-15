@@ -53,7 +53,7 @@ const Pages = () => {
             </div>
           </nav>
 
-          <div className="bg-[#282828] w-screen top-[10vw] h-[calc(100vh-10vw)] relative flex justify-center items-center">
+          <div className="bg-[#282828] w-screen top-[10vw] h-[calc(100vh-12vw)] relative flex justify-center items-center">
             <div className="relative max-h-[90vh] max-w-[90vh] h-[100vw] w-[100%]">
             <Routes>
               <Route path="/" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
