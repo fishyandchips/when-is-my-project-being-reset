@@ -27,7 +27,7 @@
           "imageFileNames": [
             "IMG_1119.jpg"
           ],
-          "lastReset": "2025-04-03T14:00:00.000Z",
+          "lastReset": "2025-05-15T14:00:00.000Z",
           "hasEvent": false,
           "currInterval": 42
         },
@@ -224,6 +224,53 @@
           "lastReset": "2025-04-23T14:00:00.000Z",
           "hasEvent": false,
           "currInterval": 40
+        }
+      ]
+    },
+    "NineDegreesWaterloo": {
+      "intervalDays": [
+        35
+      ],
+      "sectors": [
+        {
+          "name": "Sector 1",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-07T14:00:00.000Z",
+          "hasEvent": true,
+          "currInterval": 35
+        },
+        {
+          "name": "Sector 2",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-28T14:00:00.000Z",
+          "hasEvent": true,
+          "currInterval": 35
+        },
+        {
+          "name": "Sector 3",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-14T14:00:00.000Z",
+          "hasEvent": true,
+          "currInterval": 35
+        },
+        {
+          "name": "Sector 4",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-16T14:00:00.000Z",
+          "hasEvent": true,
+          "currInterval": 35
+        },
+        {
+          "name": "Sector 5",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-30T14:00:00.000Z",
+          "hasEvent": true,
+          "currInterval": 35
         }
       ]
     }
