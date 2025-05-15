@@ -109,7 +109,7 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, curr
               <div className="carousel-inner">
                 {images.map((image, index) => (
                   <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                    <img src={image} loading="lazy" className="object-contain max-h-[50vh] border-4 border-white mx-auto border-opacity-50" alt={`Slide ${index + 1}`} />
+                    <img src={image} className="object-contain max-h-[50vh] border-4 border-white mx-auto border-opacity-50" alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
               </div>
