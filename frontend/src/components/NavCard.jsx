@@ -28,8 +28,8 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
             open ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
-          <div className="mt-[5vw] text-center flex flex-col gap-[2vw]">
-            <h1 className="border-b border-white pb-3 text-[5vw]"><strong>gyms</strong></h1>
+          <div className="mt-[5vw] text-center text-[5vw] flex flex-col gap-[2vw]">
+            <h1 className="border-b border-white pb-3 text-[7vw]"><strong>gyms</strong></h1>
             <Link to="/BlocHausLeichhardt" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus leichhardt</Link>
             <Link to="/BlocHausMarrickville" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus marrickville</Link>
           </div>

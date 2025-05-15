@@ -75,7 +75,7 @@
           "imageFileNames": [
             "IMG_1120.jpg"
           ],
-          "lastReset": "2025-03-27T14:00:00.000Z",
+          "lastReset": "2025-05-08T14:00:00.000Z",
           "hasEvent": false,
           "currInterval": 42
         }
@@ -123,9 +123,9 @@
             "IMG_1138.jpg",
             "IMG_1140.jpg"
           ],
-          "lastReset": "2025-04-07T14:00:00.000Z",
+          "lastReset": "2025-05-14T14:00:00.000Z",
           "hasEvent": false,
-          "currInterval": 37
+          "currInterval": 40
         },
         {
           "name": "Sector 4",
@@ -209,9 +209,9 @@
             "IMG_1148.jpg",
             "IMG_1150.jpg"
           ],
-          "lastReset": "2025-04-02T14:00:00.000Z",
+          "lastReset": "2025-05-12T14:00:00.000Z",
           "hasEvent": false,
-          "currInterval": 40
+          "currInterval": 37
         },
         {
           "name": "Sector 11",

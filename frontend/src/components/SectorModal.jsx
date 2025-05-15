@@ -108,22 +108,22 @@ const SectorModal = ({ open, handleClose, bgColor, name, images, resetDate, curr
               <div className="carousel-inner">
                 {images.map((image, index) => (
                   <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                    <img src={image} className="d-block w-100 object-contain max-h-[50vh]" alt={`Slide ${index + 1}`} />
+                    <img src={image} className="object-contain max-h-[50vh] border-4 border-white mx-auto border-opacity-50" alt={`Slide ${index + 1}`} />
                   </div>
                 ))}
               </div>
             </div>
           ) : images.length === 1 ? (
             <div>
-              <img src={images[0]} className="d-block w-100 object-contain max-h-[50vh]" alt="Slide 1" />
+              <img src={images[0]} className="object-contain max-h-[50vh] border-4 border-white mx-auto border-opacity-50" alt="Slide 1" />
             </div>
           ) : (
             <div className="flex flex-col gap-4 justify-center items-center min-h-[50vh] bg-[#282828]">
-              <ImageNotSupportedIcon sx={{ ml: 1, fontSize: 80, opacity: 0.5 }}></ImageNotSupportedIcon>
-              <h1 className="opacity-50">No images to display</h1>
+              <ImageNotSupportedIcon sx={{ ml: 1, fontSize: 60, opacity: 0.5 }}></ImageNotSupportedIcon>
+              <h2 className="opacity-50">No images to display</h2>
             </div>
           )}
-          <h3 className="text-center opacity-50 text-[1.2vw]">NOTE: Images may not always be accurate.</h3>
+          <h3 className="text-center opacity-50 text-[2.5vw]">NOTE: Images may not always be accurate.</h3>
 
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
             {formatDate(resetDate)}

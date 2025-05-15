@@ -35,7 +35,7 @@ const Pages = () => {
     <>
       {!isLandscape ? (
         <>
-          <nav className="bg-[#616161] w-screen h-[10vw] fixed flex items-center top-0 justify-between p-4 z-20 text-[3vw] text-white">
+          <nav className="bg-[#616161] w-screen h-[10vw] fixed flex items-center top-0 justify-between pl-4 pr-4 z-20 text-[3vw] text-white">
             <NavCard
               open={menuOpen}
               setOpen={setMenuOpen}
