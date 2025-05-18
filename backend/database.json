@@ -273,6 +273,85 @@
           "currInterval": 35
         }
       ]
+    },
+    "NomadAnnandale": {
+      "intervalDays": [
+        35
+      ],
+      "sectors": [
+        {
+          "name": "Syndicate",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-29T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "???",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-04T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "The Kitchen",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-06T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Comp Wall",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-11T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Parklife",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-27T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Moon Hill",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-30T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Nazarre",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-30T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Peanut",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-05-13T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        },
+        {
+          "name": "Musee D'Cove",
+          "images": [],
+          "imageFileNames": [],
+          "lastReset": "2025-04-30T14:00:00.000Z",
+          "hasEvent": false,
+          "currInterval": 35
+        }
+      ]
     }
   }
 }

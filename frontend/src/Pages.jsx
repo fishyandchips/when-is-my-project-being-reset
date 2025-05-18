@@ -6,6 +6,7 @@ import MenuIcon from './components/MenuIcon';
 import BlocHausLeichhardt from './components/BlocHausLeichhardt';
 import BlocHausMarrickville from './components/BlocHausMarrickville';
 import NineDegreesWaterloo from './components/NineDegreesWaterloo';
+import NomadAnnandale from './components/NomadAnnandale';
 
 import './App.css';
 
@@ -62,6 +63,7 @@ const Pages = () => {
                 <Route path="/BlocHausLeichhardt" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
                 <Route path="/BlocHausMarrickville" element={<BlocHausMarrickville menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
                 <Route path="/9DegreesWaterloo" element={<NineDegreesWaterloo menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
+                <Route path="/NomadAnnandale" element={<NomadAnnandale menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
               </Routes>
             </div>
           </div>
@@ -89,6 +91,7 @@ const Pages = () => {
                 <Route path="/BlocHausLeichhardt" element={<BlocHausLeichhardt menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
                 <Route path="/BlocHausMarrickville" element={<BlocHausMarrickville menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
                 <Route path="/9DegreesWaterloo" element={<NineDegreesWaterloo menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
+                <Route path="/NomadAnnandale" element={<NomadAnnandale menuOpen={menuOpen} setSectorClicked={setSectorClicked}/>} />
               </Routes>
             </div>
 

@@ -14,6 +14,7 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
             <Link to="/BlocHausLeichhardt" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus leichhardt</Link>
             <Link to="/BlocHausMarrickville" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus marrickville</Link>
             <Link to="/9DegreesWaterloo" style={{ color: 'white' }} onClick={() => setOpen(false)}>9 degrees waterloo</Link>
+            <Link to="/NomadAnnandale" style={{ color: 'white' }} onClick={() => setOpen(false)}>nomad annandale</Link>
           </div>
 
           <div className="text-center">
@@ -34,6 +35,7 @@ const NavCard = ({ open, setOpen, isLandscape }) => {
             <Link to="/BlocHausLeichhardt" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus leichhardt</Link>
             <Link to="/BlocHausMarrickville" style={{ color: 'white' }} onClick={() => setOpen(false)}>blochaus marrickville</Link>
             <Link to="/9DegreesWaterloo" style={{ color: 'white' }} onClick={() => setOpen(false)}>9 degrees waterloo</Link>
+            <Link to="/NomadAnnandale" style={{ color: 'white' }} onClick={() => setOpen(false)}>nomad annandale</Link>
           </div>
 
           <div className="text-center">
